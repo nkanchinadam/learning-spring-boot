@@ -1,6 +1,7 @@
 package com.learning.springboot.api;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.learning.springboot.model.Person;
@@ -15,6 +16,7 @@ public class PersonController {
     this.personService = personService;
   }
 
+  @PostMapping
   public void addPerson(Person person) {
     personService.addPerson(person);
   }
