@@ -41,7 +41,7 @@ public class PersonController {
     return personService.getPersonById(id).orElse(null);
   }
 
-  @PutMapping(path = "{id}")
+  @PutMapping(path = "/{id}")
   public void updatePersonById(@PathVariable("id") UUID id, @RequestBody Person newPerson) {
     personService.updatePersonById(id, newPerson);
   }
