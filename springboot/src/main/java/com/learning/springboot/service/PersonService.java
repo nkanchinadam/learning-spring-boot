@@ -1,6 +1,8 @@
 package com.learning.springboot.service;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -24,5 +26,17 @@ public class PersonService {
 
   public List<Person> getAllPeople() {
     return personDao.selectAllPeople();
+  }
+
+  public Optional<Person> getPersonById(UUID id) {
+    return personDao.selectPersonById(id);
+  }
+
+  public int updatePersonById(UUID id, Person newPerson) {
+    return personDao.updatePersonById(id, newPerson);
+  }
+
+  public int deletePerson(UUID id) {
+    return personDao.deletePersonById(id);
   }
 }
