@@ -2,7 +2,6 @@ package com.learning.springboot.model;
 
 import java.util.UUID;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
